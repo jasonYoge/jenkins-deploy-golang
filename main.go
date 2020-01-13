@@ -7,7 +7,7 @@ import (
 )
 
 func HelloWorldHandler(ctx *fasthttp.RequestCtx) {
-	_, err := fmt.Fprintln(ctx, "Hello world!")
+	_, err := fmt.Fprintln(ctx, "Hello world! This is a new branch code.")
 	if err != nil {
 		log.Println(err.Error())
 	}
