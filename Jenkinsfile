@@ -2,15 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
-            steps {
-                echo 'test...'
-            }
-        }
-
         stage('build') {
             steps {
-                echo 'echo........'
+                sh 'docker build -t golang-staging .'
+                sh 'docker image ls'
             }
         }
 
